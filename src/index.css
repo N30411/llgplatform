@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: 'Inter var', Inter, system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Bright palette */
+  --primary: #0ea5e9;
+  --primary-light: #67e8f9;
+  --primary-dark: #0891b2;
+  --secondary: #f59e42;
+  --secondary-light: #fdba74;
+  --secondary-dark: #ea580c;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+  --background: #f8fafc;
+  --background-secondary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-green: #22c55e;
+  --accent-yellow: #fde047;
+  --accent-pink: #ec4899;
+}
+
+/* Modern Card Styles */
+
+ .card-modern {
+  @apply rounded-xl bg-gradient-to-br from-primary to-secondary shadow-xl border border-primary/30 backdrop-blur-md;
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.12),
+              0 1.5px 6px rgba(244, 63, 94, 0.10),
+              0 0 0 2px #6366f1;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+ .card-modern:hover {
+  @apply bg-gradient-to-br from-primary to-secondary;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.18),
+              0 3px 12px rgba(244, 63, 94, 0.16),
+              0 0 0 2.5px #f43f5e;
+}
+
+/* Modern Gradient Backgrounds */
+.bg-gradient-modern {
+  @apply bg-gradient-to-br from-slate-50 via-slate-50/95 to-slate-100/90;
+}
+
+.bg-gradient-accent {
+  @apply bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700;
+}
+
+/* Subtle, light sidebar gradient for modern dashboard look */
+ .bg-gradient-sidebar {
+  @apply bg-gradient-to-b from-primary via-primary/80 to-primary/60;
+}
+
+/* Subtle gradient for the Population Trends card: soft indigo -> cyan */
+ .bg-gradient-population {
+  @apply bg-gradient-to-br from-primary via-secondary to-lime-400;
+}
+
+/* Generic light card gradient used across dashboard widgets */
+ .bg-gradient-card {
+  @apply bg-gradient-to-br from-white via-gray-50 to-gray-100;
+}
+
+/* Modern Button Styles */
+ .btn-modern {
+  @apply rounded-lg px-4 py-2 font-bold transition-all duration-200;
+  @apply bg-gradient-to-br from-secondary to-lime-400 text-white shadow-md;
+  @apply hover:from-lime-400 hover:to-secondary hover:shadow-lg;
+  @apply active:from-primary active:to-secondary;
+}
+
+ .btn-modern-outline {
+  @apply rounded-lg px-4 py-2 font-bold transition-all duration-200;
+  @apply border border-primary bg-white text-primary;
+  @apply hover:bg-primary/5 hover:border-secondary;
+  @apply active:bg-secondary/10;
+}
+
+/* Modern Input Styles */
+ .input-modern {
+  @apply rounded-lg border-primary bg-white/80 px-4 py-2.5;
+  @apply text-primary;
+  @apply focus:border-secondary focus:ring-2 focus:ring-secondary/20;
+  @apply placeholder:text-accent-slate;
+}
